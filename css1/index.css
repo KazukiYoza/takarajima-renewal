@@ -1022,10 +1022,10 @@ footer .w-inner .cont-inner ul li {
 
 @media (max-width: 1024px) {
   .sel-wrapper ul {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1061,8 +1061,8 @@ footer .w-inner .cont-inner ul li {
 
 @media (min-width: 1025px) {
   .clas-wrapper ul .item-contents {
-    width: 300px;
-    height: 250px;
+    width: 460px;
+    height: 380px;
   }
 }
 
