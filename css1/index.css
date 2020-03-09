@@ -985,6 +985,7 @@ footer .w-inner .cont-inner ul li a {
   position: relative;
   padding: 15px;
   background-color: white;
+  border-radius: 20px 20px 0 0;
 }
 
 .sub-visual .sub-visual__thumb::before {
@@ -993,7 +994,7 @@ footer .w-inner .cont-inner ul li a {
   font-size: 1.3rem;
   color: #fff;
   background-color: #ff7734;
-  padding: 5px 15px;
+  padding: 10px 15px;
   border-radius: 16px;
   font-weight: 700;
   position: absolute;
@@ -1002,7 +1003,7 @@ footer .w-inner .cont-inner ul li a {
   letter-spacing: 0;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
-  font-family: "M PLUS 1p", Helvetica,Arial,sans-serif;
+  font-family: 'Kosugi Maru',Helvetica,Arial,sans-serif;
   font-weight: bold;
 }
 
@@ -1030,6 +1031,7 @@ footer .w-inner .cont-inner ul li a {
   height: 50%;
   padding: 10px;
   background-color: white;
+  border-radius: 0 0 20px 20px;
 }
 
 .sub-visual .sub-visual__text h3 {
@@ -1039,7 +1041,7 @@ footer .w-inner .cont-inner ul li a {
 
 .sub-visual .sub-visual__text p {
   border-top: 1px solid #dadada;
-  padding-top: 10px;
+  padding: 15px;
 }
 
 .slider {
