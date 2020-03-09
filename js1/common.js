@@ -5,15 +5,14 @@ $('.nav-open').on('click',function(){
     return false;
 });
 
-// $(".sidebar > nav > ul > li").hover(function() {
-//     //マウスカーソルが重なった時の処理
-//     $(this).children('.nav-child').css('visibility', 'visible');
-// },
-// function() {
-//     //マウスカーソルが離れた時の処理
-//     $(this).children('.nav-child').css('visibility', 'hidden');
-// });
-
+// メインスライダー
+$('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    dots:true,
+    slidesToShow:3,
+    slidesToScroll:2
+});
 
 // 楽天検索ボックス
 function Form_Load() {
