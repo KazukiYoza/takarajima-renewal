@@ -433,8 +433,10 @@ footer
                 flex-wrap: wrap
                 li
                     display: inline-block
-                    border-left: 1px solid #f7f7f7
+                    // border-left: 1px solid #f7f7f7
                     margin: 0 1rem
+                    a
+                        color: white
 
 #copyright
     text-align: center
@@ -521,7 +523,6 @@ footer
 
 // メイン部分
 .main
-    @include pc
         // width: calc(100vw - 200px)
         // position: relative
         // top: 50px
@@ -532,8 +533,7 @@ footer
         box-sizing: border-box
         position: relative
         top: 100px
-    @include sp
-        width: 100vw
+
         
 .w-inner
     // background-color: $mn-color
@@ -627,13 +627,14 @@ footer
 // PICKUPエリア
 .pickup-wrapper
     position: relative
+    // background: orange
     @include pc
         // width: calc(100vw - 200px)
         width: 100%
         height: 80vh
         top: 100px
         // left: 200px
-        max-width: 2000px
+        // max-width: 2000px
         // height: calc(100vh - 100px)
     @include sp
         width: 100%
@@ -653,7 +654,8 @@ footer
             height: 60%
         img
             width: 100%
-            height: 100%
+            height: auto
+            object-fit: cover
             &:hover
                 opacity: 0.7
                 transition-duration: 0.5s
@@ -662,6 +664,8 @@ footer
     width: 35%
     height: 100%
     flex-direction: column
+    padding: 15px
+    background-color: #FFF7CC
     @include sp
         width: 100%
         height: 66%
@@ -673,15 +677,49 @@ footer
         max-width: 100%
         height: 50%
         overflow: hidden
+        position: relative
+        padding: 15px
+        background-color: white
+        &::before
+            content: 'てーげーめーにちうちなー日記'
+            font-size: 13px
+            font-size: 1.3rem
+            color: #fff
+            background-color: #ff7734
+            padding: 5px 15px
+            border-radius: 16px
+            font-weight: 700
+            position: absolute
+            left: 1px
+            top: 8px
+            letter-spacing: 0
+            transform: rotate(-3deg)
+            font-family: "M PLUS 1p", Helvetica,Arial,sans-serif
+            font-weight: bold
+        &::after
+            content: ''
+            width: 20px
+            height: 20px
+            background-color: #ff7734
+            display: block
+            transform: rotate(-47deg)
+            position: absolute
+            left: 50px
+            top: 44px
         img
             width: 100%
             height: 100%
+            object-fit: cover
     .sub-visual__text  
         height: 50%
         padding: 10px
+        background-color: white
         h3
             text-align: left
             border-bottom: 1px solid #dadada 
+        p
+            border-top: 1px solid #dadada
+            padding-top: 10px
 
 
 .slider
