@@ -1,4 +1,40 @@
 @charset "UTF-8";
+@media (min-width: 1025px) {
+  .pc-only {
+    display: block;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 1024px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .sp-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 1024px) {
+  .sp-only {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sp-only {
+    display: block;
+  }
+}
+
 html p, html li, html a {
   font-size: 15px;
   list-style: none;
@@ -32,24 +68,12 @@ html img {
   display: flex;
 }
 
-@media (max-width: 1024px) {
-  .pc-only {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1025px) {
-  .sp-only {
-    display: none !important;
-  }
-}
-
 header {
   width: 100vw;
   height: 100px;
   position: fixed;
   background-color: white;
-  z-index: 100;
+  z-index: 1000;
 }
 
 @media (max-width: 1024px) {
@@ -515,7 +539,7 @@ header {
 footer {
   width: 100%;
   padding-top: 20px;
-  background-color: #ff7734;
+  background-color: #E6E1DB;
   z-index: 99;
 }
 
@@ -897,7 +921,7 @@ footer .w-inner .cont-inner ul li a {
 @media (min-width: 1025px) {
   .pickup-wrapper {
     width: 100%;
-    height: 80vh;
+    height: 40vw;
     top: 100px;
   }
 }
@@ -932,21 +956,6 @@ footer .w-inner .cont-inner ul li a {
   .pickup-wrapper .main-visual {
     height: 60%;
   }
-}
-
-.pickup-wrapper .main-visual img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.pickup-wrapper .main-visual img:hover {
-  opacity: 0.7;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .sub-visual {
@@ -1045,12 +1054,112 @@ footer .w-inner .cont-inner ul li a {
 }
 
 .slider {
-  margin: 0 auto 50px;
-  height: 100%;
+  height: 75%;
+  margin: 0 auto 5px;
+}
+
+.slider-nav img {
+  width: 100%;
 }
 
 .slider img {
   width: 100%;
+  height: 32vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 560px) and (max-width: 1024px) {
+  .slider img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider img {
+    height: 100%;
+  }
+}
+
+.slider .slick-slide {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.slider .slick-slide:hover {
+  opacity: 0.7;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.slider .slick-slide:not(.slick-current) {
+  opacity: .5;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.slick-slide .slick-current img:hover {
+  opacity: 0.7;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.thumbnail {
+  height: 25%;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.thumbnail .slick-track {
+  width: auto !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+}
+
+.thumbnail .slick-list {
+  height: 100%;
+}
+
+.thumbnail .slick-slide {
+  width: 100px;
+}
+
+.thumbnail img {
+  width: 10vw;
+  height: auto;
+  display: block;
+}
+
+.thumbnail div {
+  margin: 5px;
+}
+
+.thumbnail .slick-next {
+  right: 20px;
+  z-index: 100;
+}
+
+.thumbnail .slick-prev {
+  left: 15px;
+  z-index: 100;
+}
+
+.thumbnail div div div {
+  cursor: pointer;
 }
 
 .slick-prev::before, .slick-next::before {
@@ -1110,7 +1219,13 @@ footer .w-inner .cont-inner ul li a {
   border-top: 1px solid #ccc;
   border-bottom: none;
   display: table-cell;
-  padding: 10px 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  .news-list dd, .news-list dt {
+    padding: 5px;
+  }
 }
 
 .news-list dt {

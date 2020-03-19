@@ -26,8 +26,27 @@ $hover-color: #EE7325//#F2646E
 @mixin sp 
   @media (max-width: ($sp))
     @content
-    
+
+.pc-only
+    @include pc
+        display: block
+    @include tab
+        display: none !important
+    @include sp
+        display: none !important
+
+.sp-only
+    @include pc
+        display: none !important
+    @include tab
+        display: block
+    @include sp
+        display: block
+
 // 共通部分
+// *
+//     border: 1px solid #9a9a9a
+
 
 html
     p,li,a 
@@ -48,12 +67,6 @@ html
 
 .fbox
     display: flex
-.pc-only
-    @include sp
-        display: none !important
-.sp-only
-    @include pc
-        display: none !important
 
 // ヘッダー部分
 
@@ -62,7 +75,7 @@ header
     height: 100px
     position: fixed
     background-color: $hd-color
-    z-index: 100
+    z-index: 1000
     @include sp
         height: 50px
     @include tab
@@ -364,7 +377,7 @@ footer
     width: 100%
     padding-top: 20px
     // height: 50vh
-    background-color: #ff7734
+    background-color: #E6E1DB
     // position: relative
     // top: 100px
     z-index: 99
@@ -631,7 +644,7 @@ footer
     @include pc
         // width: calc(100vw - 200px)
         width: 100%
-        height: 80vh
+        height: 40vw
         top: 100px
         // left: 200px
         // max-width: 2000px
@@ -652,14 +665,8 @@ footer
             overflow: hidden
         @include sp
             height: 60%
-        img
-            width: 100%
-            height: auto
-            object-fit: cover
-            &:hover
-                opacity: 0.7
-                transition-duration: 0.5s
-                transform: scale(1.05)
+
+
 .sub-visual
     width: 35%
     height: 100%
@@ -725,11 +732,86 @@ footer
 
 
 .slider
-    // max-width: 600px
-    margin: 0 auto 50px
-    height: 100%
+    // max-width: 700px
+    height: 75%
+    margin: 0 auto 5px
+    // padding: 0 5%
+    &-nav
+        img
+            width: 100%
     img
         width: 100%
+        height: 32vw 
+        object-fit: cover
+        @include tab
+            height: 100%
+        @include sp
+            height: 100%
+        // max-height: 60%
+
+.slider .slick-slide 
+    transition: .3s ease
+    transform: scale(1)
+    &:hover
+        opacity: 0.7
+        transition-duration: 0.5s
+        transform: scale(1.05)
+
+.slider .slick-slide:not(.slick-current) 
+  opacity: .5
+  transform: scale(.85)
+  
+.slick-slide .slick-current
+    img
+        &:hover
+            opacity: 0.7
+            transition-duration: 0.5s
+            transform: scale(1.05)
+            
+.thumbnail
+    height: 25%
+    width: 100%
+    max-width: 900px 
+    margin: 0 auto
+    .slick-track
+        width: auto !important
+        display: flex
+        justify-content: space-evenly
+        align-items: top
+        // padding-top: 10px
+    .slick-list
+        height: 100%
+    .slick-slide
+        width: 100px
+    // &:not(.slick-current) 
+    //     opacity: .5
+    img
+        width: 10vw
+        height: auto
+        display: block
+    div
+        margin: 5px
+    .slick-next  
+        right: 20px 
+        z-index: 100
+    .slick-prev  
+        left: 15px 
+        z-index: 100
+    // .slick-current  
+    //     opacity: 0.5
+    div div div  
+        // margin: 0 auto
+        cursor: pointer
+
+// .slider
+//     // max-width: 600px
+//     margin: 0 auto 50px
+//     height: 100%
+//     img
+//         width: 100%
+//         height: 50vw
+//         object-fit: cover
+    
 
 .slick-prev::before, .slick-next::before
     font-size: 30px
@@ -773,7 +855,9 @@ footer
         border-top: 1px solid #ccc
         border-bottom: none
         display: table-cell
-        padding: 10px 10px
+        padding: 10px
+        @include sp
+            padding: 5px
     dt
         width: 15%
     dd
