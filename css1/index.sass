@@ -72,7 +72,7 @@ html
 
 header
     width: 100vw
-    height: 100px
+    height: 70px
     position: fixed
     background-color: $hd-color
     z-index: 1000
@@ -84,7 +84,7 @@ header
     width: 15%
     height: 100%
     text-align: center
-    padding: 15px
+    // padding: 15px
     @include sp
         width: 30%
         z-index: 1000
@@ -106,11 +106,11 @@ header
     #sbox //検索ボックス
         position: absolute //フォームの絶対位置
         outline: 0 //クリック時の青い枠線消す
-        height: 50px //検索ボックスの高さ
+        height: 35px //検索ボックスの高さ
         width: 300px
         padding: 0 10px //テキスト位置調整
         border: 1px solid #D7D2CC
-        border-radius: 20px //検索ボックスの角を丸める
+        border-radius: 5px //検索ボックスの角を丸める
         //background: #eee //検索ボックスの背景カラー
         background-color: #fff
         @include pc
@@ -126,14 +126,14 @@ header
     #sbtn //検索ボタン
         width: 70px //検索ボタンの横幅 
         position: absolute //検索ボタンの絶対位置 
-        border-radius: 0 20px 20px 0 //検索ボタンの角を丸める 
+        border-radius: 0 5px 5px 0 //検索ボタンの角を丸める 
         //background: #7fbfff //検索ボタンの背景カラー 
         background-color: #8B7F78
         border: none //検索ボタンの枠線を消す
         color: #fff //検索ボタンのテキストカラー 
         font-weight: bold //検索ボタンのテキスト太字 
         @include pc
-            height: 50px //検索ボタンの縦幅 
+            height: 35px //検索ボタンの縦幅 
             left: 270px //検索ボタンの位置調整
             top: 20px
             font-size: 16px //検索ボタンのフォントサイズ
@@ -151,6 +151,8 @@ header
     height: 100%
     padding: 30px 20px
     ul
+        height: 100%
+        align-items: center
         justify-content: flex-end
         li
             font-size: 0.9rem
@@ -545,7 +547,7 @@ footer
         background-image: url("../images/bg-image.png")
         box-sizing: border-box
         position: relative
-        top: 100px
+        top: 70px
 
         
 .w-inner
@@ -645,7 +647,7 @@ footer
         // width: calc(100vw - 200px)
         width: 100%
         height: 40vw
-        top: 100px
+        top: 70px
         // left: 200px
         // max-width: 2000px
         // height: calc(100vh - 100px)
