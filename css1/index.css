@@ -1125,9 +1125,8 @@ footer .w-inner .cont-inner ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
