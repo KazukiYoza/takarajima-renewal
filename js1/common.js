@@ -6,13 +6,13 @@ $('.nav-open').on('click',function(){
 });
 
 // メインスライダー
-$('.slider').slick({
-    autoplay:true,
-    autoplaySpeed:5000,
-    dots:true,
-    slidesToShow:3,
-    slidesToScroll:2
-});
+// $('.slider').slick({
+//     autoplay:true,
+//     autoplaySpeed:5000,
+//     dots:true,
+//     slidesToShow:3,
+//     slidesToScroll:2
+// });
 
 // 楽天検索ボックス
 function Form_Load() {
